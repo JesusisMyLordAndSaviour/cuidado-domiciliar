@@ -3,67 +3,156 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cuidado Domiciliar | Enfermagem e Cuidadores</title>
+  <title>Cuidado Domiciliar Premium | São Paulo</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f7f9fb;
-      color: #1f2933;
+    :root {
+      --primary: #0f766e;
+      --primary-dark: #0d5c56;
+      --secondary: #ecfeff;
+      --text-dark: #0f172a;
+      --text-light: #475569;
+      --bg-light: #f8fafc;
+      --white: #ffffff;
     }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
     header {
-      background: #0f766e;
-      color: white;
-      padding: 40px 20px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: var(--white);
+      padding: 80px 20px;
       text-align: center;
     }
-    section {
+
+    header h1 {
+      font-size: 2.6rem;
       max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 0 auto 16px;
     }
-    h1, h2 {
-      margin-bottom: 12px;
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 720px;
+      margin: 0 auto 32px;
+      opacity: 0.95;
     }
+
+    .cta-group {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
     .cta {
-      background: #14b8a6;
-      color: white;
-      padding: 15px 25px;
-      display: inline-block;
-      border-radius: 6px;
+      background: var(--white);
+      color: var(--primary);
+      padding: 16px 28px;
+      border-radius: 10px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
+
+    .cta.secondary {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.8);
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 24px;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    section > p {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 48px;
+      color: var(--text-light);
+    }
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
     }
+
     .card {
-      background: white;
-      padding: 20px;
+      background: var(--white);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .highlight {
+      background: var(--secondary);
+      border-left: 6px solid var(--primary);
+      padding: 40px 24px;
+      border-radius: 12px;
+    }
+
+    form {
+      max-width: 480px;
+      margin: 0 auto;
+      display: grid;
+      gap: 14px;
+    }
+
+    input, select, button {
+      padding: 14px 16px;
+      font-size: 1rem;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
     }
-    footer {
-      background: #0f766e;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 60px;
-    }
-    input, button {
-      padding: 12px;
-      width: 100%;
-      margin-top: 10px;
-    }
+
     button {
-      background: #0f766e;
-      color: white;
+      background: var(--primary);
+      color: var(--white);
       border: none;
-      border-radius: 6px;
-      font-size: 16px;
+      font-weight: 600;
       cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    button:hover {
+      background: var(--primary-dark);
+    }
+
+    footer {
+      background: #020617;
+      color: #cbd5f5;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 100px;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -71,50 +160,63 @@
 
 <header>
   <h1>Cuidadores e Enfermagem em Casa, com Segurança</h1>
-  <p>Para idosos, pós-cirurgia e cuidados pontuais em São Paulo</p>
-  <div style="margin-top:20px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
-    <a class="cta" href="#form">Quero um cuidador</a>
-    <a class="cta" href="#form" style="background:#0d9488;">Sou profissional de saúde</a>
+  <p>Para idosos, pós-cirurgia e cuidados pontuais em São Paulo. Profissionais verificados, atendimento humano e sem burocracia.</p>
+  <div class="cta-group">
+    <a href="#form" class="cta">Quero um cuidador</a>
+    <a href="#form" class="cta secondary">Sou profissional de saúde</a>
   </div>
 </header>
 
 <section>
-  <h2>Para quem é</h2>
+  <h2>Um problema real, uma solução organizada</h2>
+  <p>Hoje, famílias encontram cuidado domiciliar no improviso. Nós trazemos organização, confiança e acesso rápido a profissionais qualificados.</p>
+
   <div class="grid">
     <div class="card">
-      <h3>👵 Famílias</h3>
-      <p>Cuidados para idosos, pós-cirúrgicos e pessoas que precisam de apoio em casa.</p>
+      <h3>👵 Para famílias</h3>
+      <p>Encontre cuidadores e profissionais de enfermagem com verificação básica, disponibilidade clara e foco no cuidado humano.</p>
     </div>
     <div class="card">
-      <h3>🧑‍⚕️ Profissionais</h3>
-      <p>Enfermeiros, técnicos, cuidadores e fisioterapeutas buscando renda extra.</p>
+      <h3>🧑‍⚕️ Para profissionais</h3>
+      <p>Conecte-se a famílias reais, receba chamadas pontuais e tenha autonomia para escolher seus plantões.</p>
+    </div>
+    <div class="card">
+      <h3>🛡️ Confiança</h3>
+      <p>Organizamos o que hoje acontece no caos, com transparência, comunicação clara e responsabilidade.</p>
     </div>
   </div>
 </section>
 
-<section>
-  <h2>O que oferecemos</h2>
+<section class="highlight">
+  <h2>Serviços iniciais</h2>
+  <p>Começamos focando no que já tem demanda real.</p>
+
   <div class="grid">
-    <div class="card">✔ Cuidadores de idosos</div>
-    <div class="card">✔ Enfermagem domiciliar básica</div>
-    <div class="card">✔ Aplicação de medicamentos</div>
-    <div class="card">✔ Acompanhamento pós-cirurgia</div>
+    <div class="card">Cuidadores de idosos</div>
+    <div class="card">Enfermagem domiciliar básica</div>
+    <div class="card">Acompanhamento pós-cirúrgico</div>
+    <div class="card">Aplicação de medicamentos</div>
   </div>
 </section>
 
 <section id="form">
   <h2>Entre na lista de interesse</h2>
-  <p>Estamos começando por São Paulo. Cadastre-se para participar.</p>
+  <p>Estamos iniciando por São Paulo. Cadastre-se e entraremos em contato.</p>
+
   <form>
-    <input type="text" placeholder="Nome" />
-    <input type="email" placeholder="Email" />
-    <input type="text" placeholder="Sou família ou profissional" />
-    <button type="submit">Enviar</button>
+    <input type="text" placeholder="Nome completo" required />
+    <input type="email" placeholder="Email" required />
+    <select required>
+      <option value="">Você é...</option>
+      <option>Família / Responsável</option>
+      <option>Profissional de saúde</option>
+    </select>
+    <button type="submit">Quero participar</button>
   </form>
 </section>
 
 <footer>
-  <p>© 2026 – Marketplace de Cuidado Domiciliar (MVP)</p>
+  © 2026 • Marketplace de Cuidado Domiciliar • MVP São Paulo
 </footer>
 
 </body>
