@@ -1,159 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cuidado Domiciliar Premium | São Paulo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuidado Domiciliar</title>
   <style>
-    :root {
-      --primary: #0f766e;
-      --primary-dark: #0d5c56;
-      --secondary: #ecfeff;
-      --text-dark: #0f172a;
-      --text-light: #475569;
-      --bg-light: #f8fafc;
-      --white: #ffffff;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg-light);
-      color: var(--text-dark);
-      line-height: 1.6;
-    }
-
-    header {
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color: var(--white);
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.6rem;
-      max-width: 900px;
-      margin: 0 auto 16px;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      max-width: 720px;
-      margin: 0 auto 32px;
-      opacity: 0.95;
-    }
-
-    .cta-group {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .cta {
-      background: var(--white);
-      color: var(--primary);
-      padding: 16px 28px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: all 0.2s ease;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-
-    .cta.secondary {
-      background: transparent;
-      color: var(--white);
-      border: 2px solid rgba(255,255,255,0.8);
-    }
-
-    .cta:hover {
-      transform: translateY(-2px);
-    }
-
-    section {
-      max-width: 1100px;
-      margin: 80px auto;
-      padding: 0 24px;
-    }
-
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 16px;
-      text-align: center;
-    }
-
-    section > p {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 48px;
-      color: var(--text-light);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-    }
-
-    .card h3 {
-      margin-top: 0;
-    }
-
-    .highlight {
-      background: var(--secondary);
-      border-left: 6px solid var(--primary);
-      padding: 40px 24px;
-      border-radius: 12px;
-    }
-
-    form {
-      max-width: 480px;
-      margin: 0 auto;
-      display: grid;
-      gap: 14px;
-    }
-
-    input, select, button {
-      padding: 14px 16px;
-      font-size: 1rem;
-      border-radius: 10px;
-      border: 1px solid #e2e8f0;
-    }
-
-    button {
-      background: var(--primary);
-      color: var(--white);
-      border: none;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s ease;
-    }
-
-    button:hover {
-      background: var(--primary-dark);
-    }
-
-    footer {
-      background: #020617;
-      color: #cbd5f5;
-      text-align: center;
-      padding: 40px 20px;
-      margin-top: 100px;
-      font-size: 0.9rem;
-    }
+    body {font-family: Arial, sans-serif; margin:0; padding:0; color:#333;}
+    header {background:#1e3a8a; color:white; padding:40px 20px; text-align:center;}
+    header h1 {margin:0; font-size:2.2em;}
+    header p {margin:10px 0; font-size:1.1em;}
+    .cta-group {margin-top:20px;}
+    .cta, .cta.secondary {padding:15px 25px; margin:5px; border:none; border-radius:8px; text-decoration:none; display:inline-block; font-weight:bold;}
+    .cta {background:#fbbf24; color:#000;}
+    .cta.secondary {background:#2563eb; color:white;}
+    section {padding:60px 20px; max-width:1000px; margin:0 auto;}
+    h2 {color:#1e3a8a;}
+    p {margin:10px 0 20px; line-height:1.5;}
+    form {display:flex; flex-direction:column; gap:10px; max-width:400px;}
+    input, select, button {padding:10px; font-size:1em; border-radius:6px; border:1px solid #ccc;}
+    button {background:#1e3a8a; color:white; font-weight:bold; border:none; cursor:pointer;}
+    .grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:20px; margin-top:20px;}
+    .card {background:#f9f9f9; padding:20px; border-radius:12px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+    .faq {margin-top:40px;}
+    .faq dt {font-weight:bold; margin-top:15px;}
+    .faq dd {margin-left:20px; margin-bottom:10px;}
+    .terms {background:#f1f5f9; padding:20px; border-radius:10px; margin-top:40px;}
+    footer {background:#1e3a8a; color:white; text-align:center; padding:20px;}
+    a {color:#2563eb;}
   </style>
 </head>
 <body>
@@ -166,26 +39,6 @@
     <a href="https://wa.me/5511999999999?text=Olá!%20Sou%20profissional%20de%20saúde%20e%20gostaria%20de%20trabalhar%20com%20atendimento%20domiciliar.%20Pode%20me%20explicar%20como%20funciona%3F" target="_blank" class="cta secondary">Sou profissional de saúde</a>
   </div>
 </header>
-
-<section>
-  <h2>Um problema real, uma solução organizada</h2>
-  <p>Hoje, famílias encontram cuidado domiciliar no improviso. Nós trazemos organização, confiança e acesso rápido a profissionais qualificados.</p>
-
-  <div class="grid">
-    <div class="card">
-      <h3>👵 Para famílias</h3>
-      <p>Encontre cuidadores e profissionais de enfermagem com verificação básica, disponibilidade clara e foco no cuidado humano.</p>
-    </div>
-    <div class="card">
-      <h3>🧑‍⚕️ Para profissionais</h3>
-      <p>Conecte-se a famílias reais, receba chamadas pontuais e tenha autonomia para escolher seus plantões.</p>
-    </div>
-    <div class="card">
-      <h3>🛡️ Confiança</h3>
-      <p>Organizamos o que hoje acontece no caos, com transparência, comunicação clara e responsabilidade.</p>
-    </div>
-  </div>
-</section>
 
 <section class="highlight">
   <h2>Serviços iniciais</h2>
@@ -249,8 +102,47 @@
   </form>
 </section>
 
+<section id="terms" class="terms">
+  <h2>Termos e Condições da Plataforma</h2>
+  <p>Leia com atenção. Nossa plataforma conecta famílias a profissionais de saúde.</p>
+  <ul>
+    <li><strong>Intermediação:</strong> A plataforma apenas conecta profissionais e famílias, não prestando serviços diretamente.</li>
+    <li><strong>Responsabilidade do profissional:</strong> Cada profissional é autônomo e totalmente responsável pelo serviço prestado.</li>
+    <li><strong>Responsabilidade da família:</strong> Fornecer informações corretas, seguir instruções e garantir segurança no cuidado.</li>
+    <li><strong>Comissão:</strong> A plataforma recebe apenas uma taxa de intermediação sobre o serviço contratado.</li>
+    <li><strong>Limitação de responsabilidade:</strong> A plataforma não se responsabiliza por resultados clínicos ou erros do profissional.</li>
+    <li><strong>Segurança e verificação:</strong> Profissionais são verificados, mas resultados não são garantidos.</li>
+  </ul>
+</section>
+
+<section class="faq">
+  <h2>Dúvidas Frequentes (FAQ)</h2>
+  <dl>
+    <dt>Quem presta o serviço?</dt>
+    <dd>Profissionais autônomos verificados, cada um responsável pelo serviço que oferece.</dd>
+
+    <dt>Quem é responsável se algo der errado?</dt>
+    <dd>A plataforma não é prestadora do serviço. Profissional e família assumem responsabilidade direta.</dd>
+
+    <dt>Como funciona a cobrança?</dt>
+    <dd>Você paga o profissional. A plataforma recebe apenas comissão sobre o serviço.</dd>
+
+    <dt>Preciso contratar um plano ou assinar algo?</dt>
+    <dd>Não. Você só paga o serviço que deseja, sem mensalidades.</dd>
+
+    <dt>Posso confiar nos profissionais?</dt>
+    <dd>Todos passam por verificação básica de formação e experiência.</dd>
+
+    <dt>A plataforma garante resultado do serviço?</dt>
+    <dd>Não. Garantimos apenas organização, verificação e acesso a profissionais confiáveis.</dd>
+
+    <dt>Profissionais podem trabalhar para mais de uma família?</dt>
+    <dd>Sim. Eles são autônomos e podem escolher suas agendas.</dd>
+  </dl>
+</section>
+
 <footer>
-  © 2026 • Marketplace de Cuidado Domiciliar • MVP São Paulo
+  <p>© 2026 Cuidado Domiciliar. Todos os direitos reservados. <a href="#terms">Termos e FAQ</a></p>
 </footer>
 
 </body>
